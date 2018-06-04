@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section SPAViews {
+    <div id="Signin" class="m-1">
+        <div class="center row">
+            @* Photo part of logo *@
+            <div class="col-sm-8 col-md-8">
+                <img src="~/Content/Signin/Signin.jpg" class="displaySize">
+            </div>
+
+            @* Sign in part *@
+            <div class="col-sm-4 col-md-4">
+                <form class="form-signin" onsubmit="return false">
+                    <h2 class="form-signin-heading">Please sign in</h2>
+
+                    <label for="EmailInput">Email address</label>
+                    <input class="form-control" id="EmailInput" type="email" placeholder="Email address" />
+
+                    <label for="PasswordInput">Password</label>
+                    <input class="form-control" id="PasswordInput" type="password" placeholder="Password" />
+
+                    <div class="checkbox">
+                        <label>
+                            <input id="RememberMeCheckbox" type="checkbox"/>Remember me
+                        </label>
+                    </div>
+
+                    <input type="button"
+                           class="btn btn-lg btn-primary btn-block"
+                           id="SignInButton"
+                           value="Sign in" />
+
+                    <input type="button"
+                           class="btn btn-link center-block"
+                           id="ForgotPasswordButton"
+                           value="Forgot Password" />
+                </form>
+
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script>
+        // Assign View-ViewModel to the above <div id = "Signin" ...
+        // $.BindingAnnotation("#Signin", () => DomBehind.RazorTemplate.Signin.SigninView, () => DomBehind.RazorTemplate.Signin.SigninViewModel)
+
+        // Since lambda description in the script tag is not supported by IE, it is declared with the old description method
+        $.BindingAnnotation("#Signin", function () { return DomBehind.RazorTemplate.Signin.SigninView; }, function () { return DomBehind.RazorTemplate.Signin.SigninViewModel; });
+    </script>
+}

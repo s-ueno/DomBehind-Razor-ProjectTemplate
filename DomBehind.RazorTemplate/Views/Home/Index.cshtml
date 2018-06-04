@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section SPAViews {
+    <div id="Home">
+        <div id="SPALayout" class="displaySize"></div>
+    </div>
+}
+
+@section Scripts{
+    <script>
+        // Assign View-ViewModel to the above <div id = "Signin" ...
+        // $.BindingAnnotation("#Home", () => DomBehind.RazorTemplate.Home.HomeView, () => DomBehind.RazorTemplate.Home.HomeViewModel)
+
+        // Since lambda description in the script tag is not supported by IE, it is declared with the old description method
+        $.BindingAnnotation("#Home", function () { return DomBehind.RazorTemplate.Home.HomeView; }, function () { return DomBehind.RazorTemplate.Home.HomeViewModel; });
+    </script>
+}

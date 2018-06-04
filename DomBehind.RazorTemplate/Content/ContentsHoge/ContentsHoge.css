@@ -1,0 +1,75 @@
+﻿/* Main */
+
+.form-hoge-main {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+    .form-hoge-main div.grid {
+        height: 60vh;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .form-hoge-main > form > .form-hoge-main-panel {
+    }
+
+.form-hoge-main-panel {
+}
+
+
+
+.form-hoge-main-rowstyle-sample {
+    font-style: italic;
+}
+
+
+.form-hoge-main-condition div > div {
+    padding: 1px 2px;
+}
+
+
+
+/* Detail */
+.form-hoge-detail {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+    .form-hoge-detail > form > .form-hoge-detail-panel {
+    }
+
+        .form-hoge-detail > form > .form-hoge-detail-panel > div[class="input-field-group"] {
+        }
+
+/* 
+    When viewed from the root, if the depth of definition is 5 levels or more, 
+    please give a new name with route name + (arbitrary name) 
+*/
+.form-hoge-detail-input-field-group {
+}
+
+    .form-hoge-detail-input-field-group > div > div input {
+        margin: 0px 1px;
+        width: 100%;
+    }
+
+    .form-hoge-detail-input-field-group input[name="FirstName"] {
+        margin: 0px 1px;
+        padding: 0;
+        width: 47%;
+    }
+
+    .form-hoge-detail-input-field-group input[name="LastName"] {
+        margin: 0px 1px;
+        padding: 0;
+        width: 47%;
+    }
+
+    .form-hoge-detail-input-field-group textarea[name="Notes"] {
+        margin: 0px 1px;
+        width: 100%;
+        height: 90px;
+        resize: none;
+    }
