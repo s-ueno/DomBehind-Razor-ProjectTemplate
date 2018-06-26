@@ -21,6 +21,8 @@ namespace DomBehind.RazorTemplate
 
         public static readonly string[] Css = new string[] {
              "~/Content/bootstrap*",
+             "~/Content/themes/base/all.css",
+             "~/Content/jquery.ui.layout.css",
              "~/Content/w2ui-1.5.rc1.css",
              "~/Content/font-awesome.css",
 
@@ -34,6 +36,9 @@ namespace DomBehind.RazorTemplate
             "~/Scripts/bootstrap.js",
             "~/Scripts/jquery-{version}.js",
             "~/Scripts/jquery.validate*",
+            "~/Scripts/jquery-ui-{version}.js",
+            "~/Scripts/jquery.layout.js",
+
             "~/Scripts/collections.js",
             "~/Scripts/w2ui-1.5.rc1.js",
             "~/Scripts/dombehind.js",
@@ -44,25 +49,17 @@ namespace DomBehind.RazorTemplate
             "~/Scripts/App/Startup.js",
             "~/Scripts/App/AppMediator.js",
             // shared
+            "~/Scripts/App/Shared/WebServiceProxy.js",
+
             "~/Scripts/App/Shared/LayoutViewModel.js",
             "~/Scripts/App/Shared/LayoutView.js",
-            "~/Scripts/App/Shared/WebServiceProxy.js",
+            "~/Scripts/App/Shared/LayoutSPAViewModel.js",
+            "~/Scripts/App/Shared/LayoutSPAView.js",
+
             // Signin
             "~/Scripts/App/Signin/WebServiceProxy.js",
             "~/Scripts/App/Signin/SigninViewModel.js",
             "~/Scripts/App/Signin/SigninView.js",
-
-            // Home
-            "~/Scripts/App/Home/WebServiceProxy.js",
-            "~/Scripts/App/Home/HomeViewModel.js",
-            "~/Scripts/App/Home/HomeView.js",
-            
-
-            "~/Scripts/App/Home/TitlebarViewModel.js",
-            "~/Scripts/App/Home/TitlebarView.js",
-
-            "~/Scripts/App/Home/SideMenuViewModel.js",
-            "~/Scripts/App/Home/SideMenuView.js",
 
             // ContentHoge
             "~/Scripts/App/ContentsHoge/WebServiceProxy.js",

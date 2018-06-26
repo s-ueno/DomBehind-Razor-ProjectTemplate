@@ -4,7 +4,7 @@ self.onmessage = function (e) {
         return;
     if (!arg.Url)
         return;
-    // chorme
+    // chrome
     var callBack = self.postMessage;
     if ((arg.SendType) && (arg.SendType === "GET")) {
         callBack(Get(arg.Url, arg.Request));

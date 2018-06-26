@@ -110,7 +110,7 @@ var DomBehind;
             get: function () {
                 if (this.JqXHR) {
                     var json = this.JqXHR.responseJSON;
-                    if (json.Message) {
+                    if (json && json.Message) {
                         return json.Message;
                     }
                     return $(this.JqXHR.responseText).filter("title").text();
@@ -2143,12 +2143,17 @@ var DomBehind;
             }
             DefaultNavigator.prototype.Move = function (uri, historyBack) {
                 uri = $.AbsoluteUri(uri);
+                if (location.href === uri)
+                    return;
                 if (historyBack) {
                     location.href = uri;
                 }
                 else {
                     location.replace(uri);
                 }
+            };
+            DefaultNavigator.prototype.Reload = function (forcedReload) {
+                location.reload(forcedReload);
             };
             DefaultNavigator.prototype.ShowModal = function (arg, option) {
                 var setting = $.extend(true, this.DefaultSetting, option);
@@ -2161,8 +2166,8 @@ var DomBehind;
                 overlay
                     .appendTo("body")
                     .fadeIn(setting.FadeInDuration, function () {
-                        $.SetDomStorage(ReferenceCountKey, $.GetDomStorage(ReferenceCountKey, 0) + 1);
-                    });
+                    $.SetDomStorage(ReferenceCountKey, $.GetDomStorage(ReferenceCountKey, 0) + 1);
+                });
                 var container;
                 if (typeof arg === "string") {
                     var ex;

@@ -43,7 +43,7 @@ var DomBehind;
                         Password: this.Password
                     }).done(function (x) {
                         if (x && x.AllowSignin) {
-                            _this.Navigator.Move('Home');
+                            _this.Navigator.Move('ContentsHoge/Main');
                         }
                         else {
                             _this.ShowWarning("failed to sign in.\n" + x.Message);

@@ -1,3 +1,0 @@
-﻿namespace DomBehind.RazorTemplate.Home {
-
-}
